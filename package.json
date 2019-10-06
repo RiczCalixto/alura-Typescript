@@ -1,0 +1,14 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc"
+  },
+  "repository": "https://github.com/RiczCalixto/alura-Typescript.git",
+  "author": "Ricardo Calixto <rcalixtos@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^3.6.3"
+  }
+}
