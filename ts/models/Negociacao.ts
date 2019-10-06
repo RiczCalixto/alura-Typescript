@@ -1,7 +1,7 @@
 class Negociacao {
-  _data;
-  _quantidade;
-  _valor;
+  private _data;
+  private _quantidade;
+  private _valor;
 
   constructor(data, quantidade, valor) {
     this._data = data;
@@ -13,10 +13,10 @@ class Negociacao {
     return this._data;
   }
   get quantidade() {
-    return this.quantidade;
+    return this._quantidade;
   }
   get valor() {
-    return this.valor;
+    return this._valor;
   }
 
   get volume() {

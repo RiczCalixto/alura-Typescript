@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "compile": "tsc"
+    "compile": "tsc",
+    "start": "tsc -w"
   },
   "repository": "https://github.com/RiczCalixto/alura-Typescript.git",
   "author": "Ricardo Calixto <rcalixtos@gmail.com>",
