@@ -11,7 +11,7 @@ class NegociacaoController {
       document.querySelector("#quantidade")
     );
     this.inputValor = <HTMLInputElement>document.querySelector("#valor");
-    this.negociacoesView.update();
+    this.negociacoesView.update(this.negociacoes);
   }
 
   adiciona(event: Event) {
@@ -24,10 +24,6 @@ class NegociacaoController {
     );
     this.negociacoes.adiciona(negociacao);
 
-    this.negociacoes.paraArray().map(negociacao => {
-      console.log(negociacao.data);
-      console.log(negociacao.quantidade);
-      console.log(negociacao.valor);
-    });
+    this.negociacoesView.update(this.negociacoes);
   }
 }
