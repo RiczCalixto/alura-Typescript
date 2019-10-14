@@ -5,7 +5,7 @@ class NegociacaoController {
   private negociacoes = new Negociacoes();
   private negociacoesView = new NegociacoesView("#negociacoesView");
   private mensagemView = new MensagemView("#mensagemView");
-
+  
   constructor() {
     this.inputData = <HTMLInputElement>document.querySelector("#data");
     this.inputQuantidade = <HTMLInputElement>(
