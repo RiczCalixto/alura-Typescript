@@ -1,10 +1,7 @@
-class NegociacoesView {
-    constructor(seletor) {
-        this.elemento = document.querySelector(seletor);
-    }
-    update(model) {
-        this.elemento.innerHTML = this.template(model);
-    }
+class NegociacoesView extends View {
+    // update(model: Negociacoes): void {
+    //   this.elemento.innerHTML = this.template(model);
+    // }
     template(model) {
         return `
     <table class="table table-hover table-bordered">
