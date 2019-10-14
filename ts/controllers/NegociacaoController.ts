@@ -2,6 +2,7 @@ class NegociacaoController {
   private inputData: HTMLInputElement;
   private inputQuantidade: HTMLInputElement;
   private inputValor: HTMLInputElement;
+  private negociacoes = new Negociacoes();
 
   constructor() {
     this.inputData = <HTMLInputElement>document.querySelector("#data");
@@ -19,8 +20,12 @@ class NegociacaoController {
       Number(this.inputQuantidade.value),
       Number(this.inputValor.value)
     );
+    this.negociacoes.adiciona(negociacao);
 
-    console.log(negociacao);
-    alert("oi oi");
+    this.negociacoes.paraArray().map(negociacao => {
+      console.log(negociacao.data);
+      console.log(negociacao.quantidade);
+      console.log(negociacao.valor);
+    });
   }
 }
