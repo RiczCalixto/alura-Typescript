@@ -1,5 +1,5 @@
-class View<T> {
-  protected elemento: Element;
+abstract class View<T> {
+  private elemento: Element;
 
   constructor(seletor: string) {
     this.elemento = document.querySelector(seletor);
@@ -9,7 +9,5 @@ class View<T> {
     this.elemento.innerHTML = this.template(model);
   }
 
-  template(model: T): string {
-    throw new Error("Deve-se implementar o método template");
-  }
+  abstract template(model: T): string;
 }
