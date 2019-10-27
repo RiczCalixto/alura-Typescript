@@ -2,6 +2,7 @@ import { MensagemView } from "./../views/MensagemView";
 import { NegociacoesView } from "./../views/NegociacoesView";
 import { Negociacoes } from "./../models/Negociacoes";
 import { Negociacao } from "./../models/Negociacao";
+import { logarTempoDeExecucao } from '../decorators/index';
 
 export class NegociacaoController {
   private inputData: HTMLInputElement;
@@ -10,6 +11,7 @@ export class NegociacaoController {
   private negociacoes = new Negociacoes();
   private negociacoesView = new NegociacoesView("#negociacoesView");
   private mensagemView = new MensagemView("#mensagemView");
+  
 
   constructor() {
     this.inputData = <HTMLInputElement>document.querySelector("#data");
@@ -19,7 +21,7 @@ export class NegociacaoController {
     this.inputValor = <HTMLInputElement>document.querySelector("#valor");
     this.negociacoesView.update(this.negociacoes);
   }
-
+  @logarTempoDeExecucao()
   adiciona(event: Event) {
     event.preventDefault();
 
